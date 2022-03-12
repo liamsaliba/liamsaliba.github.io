@@ -1,0 +1,79 @@
+* {
+    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+}
+
+button {
+    background: none;
+    outline: 0;
+    border: 1px solid var(--text-color);
+    padding: 1em;
+}
+
+
+body, body.light-theme  {
+    --text-color: #222;
+    --bkg-color: #fff;
+  }
+  /* Dark theme colors */
+  body.dark-theme {
+    --text-color: #eee;
+    --bkg-color: #121212;
+  }
+
+
+/* Styles for users who prefer dark mode at the OS level */
+@media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body { 
+      --text-color: #eee;
+      --bkg-color: #121212;
+    }
+    /* Override dark mode with light mode styles if the user decides to swap */
+    body.light-theme {
+      --text-color: #222;
+      --bkg-color: #fff;
+    }
+  }
+
+  body {
+    background: var(--bkg-color);
+    color: var(--text-color)
+}
+
+li {
+    padding-bottom: 1em;
+}
+
+body {
+    overflow: none;
+    animation: fadein 1s ease-out;
+    padding: 4em;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+#name {
+    font-weight: bold;
+}
+
+a {
+    color: rgb(198, 129, 255);
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+}
+
+main > * {
+    transform: rotate(-2deg);
+    
+}
+
+div > * {
+    transform: rotate(6deg);
+    
+}

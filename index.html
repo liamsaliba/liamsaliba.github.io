@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<title>liam saliba</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+	<link href="main.css" rel="stylesheet">
+	<meta name="theme-color" content="#ffffff">
+	<!-----<link rel="icon" sizes="192x192" href="nice-highres.png">-->
+</head>
+
+<body>
+	<main>
+		<div>
+			<h1>h1</h1>
+			<h2>i'm liam saliba</h2>
+			
+
+			<p>currently i'm a 2nd year master of computer science student @ university of melbourne
+			<p>i have a BSc (Computing and Software Systems) and DipMaths (Statistics) from unimelb (2020)
+			<p>i will be doing a masters research project soon, but i am too undecisive to choose
+			<p>this semester, i am studying statistical machine learning, ai planning for autonomy and research methods
+		</div>
+		<div>
+		<h3>teaching</h3>
+		<p>i've been an academic tutor at the university of melbourne for over two years now.
+		<p>currently i'm head tutor for comp10002 (2w), and a tutor/demonstrator for comp30023 (2t, 3d)
+		<p>i'm also helping <a href="https://shaananc.github.io/">shaananc</a> with dual delivery of <a
+			href="https://www.youtube.com/playlist?list=PL_No-EgF3MD3_5xe6FK1wIMREOiVyBV3q">comp10002 lectures</a>.
+		namely, figuring out how to deliver engaging lectures to a concurrently live in-person and 
+		online audience. so i'm in charge of mics and cameras and answering student questions in zoom chat, and usually
+		have to fix a lot of stuff while that happens.  seems like the students are enjoying it!
+		<p>previously i have taught
+		<ul>
+			<li><b>comp10002 foundations of algorithms</b>: 20s1, 20s2, 21s1, 22s1 - c programming, fundamental
+				algorithms and data structures</li>
+			<li><b>comp30023 computer systems</b>: 21s2 - operating systems, network protocols (OSI, TCP/IP),
+				cryptography and os security</li>
+			<li><b>comp30026 models of computation</b>: 21s2 (4t) - logic, discrete math, automata (regular languages,
+				cfgs, parsing), computability, haskell</li>
+			<li><b>comp20005 engineering computation</b>: 21s2 (2w).</li>
+			<li><b>info30006 information security and privacy</b>: 21s2 (2w)</li>
+		</ul>
+		<p>(21s2 is 2021 semester 2. t=tutorial, d=demonstration, w=workshop=1t1d)</p>
+		<p>most classes in 2020-2021 ran online, so i had the pleasure of zoom delivery. if you were a student of mine
+			during this time, get in touch!
+		<p>i was invited to give a lecture about computer malware for info30006. it was a lot of fun. <a
+				href="https://docs.google.com/presentation/d/1XIW9B-jQC1i1iJR07liosj6JPEkckE8znd3_snRmC2E/edit?usp=sharing">slides</a>
+		<p>in 2021-22, i expanded comp10002 and comp20005's online offering on grok by adding over 50 exercises from
+			alistair moffat's book programming software and abstraction with c
+		</div>
+		<div>
+		<h3>my stuff</h3>
+		<p>there are subject notes and misc code projects on github, i'll clean that up at some point
+		<p>i can be found online as exradr / lsp0 / lsproductions0. opinions are of my own and not my employers</p>
+		<ul>
+			<li><a href="http://github.com/liamsaliba">github - liamsaliba</a></li>
+			<li><a href="https://linkedin.com/in/liamsaliba/">linkedin</a></li>
+			<li><a href="http://youtube.com/lsp0">youtube</a> (&lt; 2016). for some reason this has >1M views</li>
+			<li><a href="./uom-study-spaces/">Check study spaces at Unimelb</a> (a quick and diry app I threw together
+				in SWOTVAC in 2019, still works)</li>
+			<li><a href="./unimelb-timetable/">Search Unimelb's timetable</a> (another quick and dirty app I threw
+				together in an afternoon)</li>
+			<li>more to come.</li>
+		</ul>
+	</div>
+	<div>
+		<h3>other stuff i think people should know about</h3>
+		<p>i did not make these, i just think they're cool</p>
+		<p>when i'll be bothered, i'll turn some of these into links</p>
+		<ul>
+			<li>github copilot -- reduce the cognitive effort of coding by 50% (citation needed)
+			<li>clang-format and prettier and others -- reduce the cognitive effort of code styling by 100% (just press
+				CMD-S in your favourite editor)
+		</ul>
+	</div>
+	<div>
+		<h3>thanks</h3>
+		<p>here i get to practice gratitude to people who have taken me places
+		<p>this section is a work in progress. i'll probably make this more polite by giving links and full names, etc
+		<p>thanks to: shaanan & jianzhong, alistair, bach & anna, shanika, suelette & chris; friends, family, tracy</p>
+		<br>
+		<p>thanks for stopping by, have a nice day!</p>
+	</div>
+	</main>
+
+	<script>
+		// because i wanted to get a light-dark mode button done in 10 seconds flat
+		// i stole this code from https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/
+		// note: i know next-theme exists but this isn't a next.js site because i can't be stuffed
+		//  with deploying that with github pages
+
+		const btn = document.querySelector(".btn-toggle");
+		const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+		const currentTheme = localStorage.getItem("theme");
+		if (currentTheme == "dark") {
+			document.body.classList.toggle("dark-theme");
+		} else if (currentTheme == "light") {
+			document.body.classList.toggle("light-theme");
+		}
+
+		btn.addEventListener("click", function () {
+			if (prefersDarkScheme.matches) {
+				document.body.classList.toggle("light-theme");
+				var theme = document.body.classList.contains("light-theme")
+					? "light"
+					: "dark";
+			} else {
+				document.body.classList.toggle("dark-theme");
+				var theme = document.body.classList.contains("dark-theme")
+					? "dark"
+					: "light";
+			}
+			localStorage.setItem("theme", theme);
+		});
+	</script>
+
+</body>
+
+
+
+</html>
